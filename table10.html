@@ -1,11 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            background-color: #075E54;
+            color: white;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .sidebar-header {
+            padding: 15px;
+            background-color: #128C7E;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .sidebar-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .sidebar-header .icons img {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .sidebar-search {
+            padding: 10px;
+            background-color: #f6f6f6;
+        }
+        .sidebar-search input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 20px;
+            background-color: white;
+            font-size: 16px;
+        }
+        .sidebar-tabs {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #f6f6f6;
+        }
+        .sidebar-tabs button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            flex-grow: 1;
+        }
+        .chat-list {
+            flex-grow: 1;
+            overflow-y: auto;
+            background-color: white;
+            padding: 10px;
+        }
+        .chat-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+        }
+        .chat-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .chat-item .details {
+            flex-grow: 1;
+        }
+        .chat-item .name {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+        .chat-item .message {
+            color: #777;
+            font-size: 14px;
+        }
+        .chat-item .time {
+            font-size: 12px;
+            color: #777;
+            text-align: right;
+        }
+        .main-content {
+            flex-grow: 2;
+            display: flex;
+            flex-direction: column;
+            background-color: #e5ddd5;
+            position: relative;
+        }
+        .main-header {
+            background-color: #075E54;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .main-header .icons img {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .chat-area {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .footer {
+            background-color: #f0f0f0;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 1000;
+        }
+        .footer input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        .footer button {
+            background-color: #128C7E;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer button img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="c:\Users\david\Downloads\WhatsApp Image 2024-08-31 at 4.22.10 PM.jpeg" alt="Perfil"> 
+                        <div class="icons">
+                <img src="c:\Users\david\Downloads\icono.png" alt="Estado"> 
+                <img src="c:\Users\david\Downloads\images (1).png" alt="Llamadas"> 
+                <img src="c:\Users\david\Downloads\images (2).png" alt="Menú"> 
+            </div>
+        </div>
+        <div class="sidebar-search">
+            <input type="text" placeholder="Buscar o iniciar un chat">
+        </div>
+        <div class="sidebar-tabs">
+            <button>CHATS</button>
+            <button>ESTADOS</button>
+            <button>LLAMADAS</button>
+        </div>
+        <div class="chat-list">
+            <div class="chat-item">
+                <img src="c:\Users\david\Downloads\WhatsApp Image 2024-08-31 at 4.23.46 PM (1).jpeg" alt="MAMA"> 
+                <div class="details">
+                    <div class="name">MAMA</div>
+                    <div class="message">Hola mi vida como estas </div>
+                </div>
+                <div class="time">2:00 PM</div>
+            </div>
+            
+            <div class="chat-item">
+                <img src="c:\Users\david\Downloads\WhatsApp Image 2024-08-31 at 4.23.46 PM.jpeg" alt="PAPA"> 
+                <div class="details">
+                    <div class="name">PAPA</div>
+                    <div class="message">hola hijo </div>
+                </div>
+                <div class="time">1:33 pm</div>
+            </div>
+            <div class="chat-item">
+                <img src="c:\Users\david\Downloads\WhatsApp Image 2024-08-31 at 4.23.46 PM (2).jpeg" alt="AMOR"> 
+                <div class="details">
+                    <div class="name">AMOR</div>
+                    <div class="message">nos vemos hoy amor </div>
+                </div>
+                <div class="time">12:30 AM</div>
+        </div>
+            
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="main-header">
+            <img src="c:\Users\david\Downloads\WhatsApp Image 2024-08-31 at 4.23.46 PM (1).jpeg" alt="MAMA"> 
+            <div>MAMA</div>
+            <div class="icons">
+                <img src="c:\Users\david\Downloads\lupa.png" alt="Buscar"> 
+                <img src="c:\Users\david\Downloads\ajutar.png" alt="Adjuntar"> 
+                <img src="c:\Users\david\Downloads\menu.png" alt="Menú"> 
+            </div>
+        </div>
+        <div class="chat-area">
+            <input type="text" placeholder="hola mi vida como estas  ">
+        </div>
+        <div class="footer">
+            <input type="text" placeholder="bien y tu mama ">
+            <button>
+                <img src="c:\Users\david\Downloads\png-transparent-fly-messager-send-communication-email-message-glyphs-icon-thumbnail.png" alt="Enviar"> 
+            </button>
+        </div>
+    </div>
+
 </body>
 </html>
