@@ -1,11 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>tabla5</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            width: 150px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            border-bottom: 2px solid #ddd;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card p {
+            margin: 0;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .manzana {
+            border-color: #b00000;
+        }
+
+        .manzana p {
+            background-color: #b00000;
+        }
+
+        .melocoton {
+            border-color: #ffb700;
+        }
+
+        .melocoton p {
+            background-color: #ffb700;
+        }
+
+        .pera {
+            border-color: #4CAF50;
+        }
+
+        .pera p {
+            background-color: #4CAF50;
+        }
+
+        .platano {
+            border-color: #e91e63;
+        }
+
+        .platano p {
+            background-color: #e91e63;
+        }
+
+        .naranja {
+            border-color: #ff9800;
+        }
+
+        .naranja p {
+            background-color: #ff9800;
+        }
+
+        .limon {
+            border-color: #8bc34a;
+        }
+
+        .limon p {
+            background-color: #8bc34a;
+        }
+
+    </style>
 </head>
 <body>
-    
+
+    <div class="container">
+        <div class="card manzana">
+            <img src="c:\Users\david\OneDrive\Escritorio\pomme-pink-lady-large.jpg" alt="Manzana">
+            <p> Manzana</p>
+        </div>
+        <div class="card melocoton">
+            <img src="c:\Users\david\Downloads\images.jpeg" alt="Melocotón">
+            <p>Melocotón</p>
+        </div>
+        <div class="card pera">
+            <img src="c:\Users\david\Downloads\images (1).jpeg" alt="Pera">
+            <p>Pera</p>
+        </div>
+        <div class="card platano">
+            <img src="c:\Users\david\Downloads\images (2).jpeg" alt="Plátano">
+            <p>Plátano</p>
+        </div>
+        <div class="card naranja">
+            <img src="c:\Users\david\Downloads\images (3).jpeg" alt="Naranja">
+            <p>Naranja</p>
+        </div>
+        <div class="card limon">
+            <img src="c:\Users\david\Downloads\images (4).jpeg" alt="Limón">
+            <p> Limón</p>
+        </div>
+    </div>
+
 </body>
 </html>
